@@ -100,7 +100,7 @@
         <textarea name="" id="checkedout" cols="50" placeholder="Output will appear here"></textarea><br><br><button><h5>Say it!</h5></button>
         <script>
             function compressthewords(words){
-                w = words.replace("  ", " ").split(" ")
+                w = words.replaceAll("  ", " ").split(" ")
                 finalword = ""
                 w.forEach(e => {
                     finalword = finalword + e[0]
