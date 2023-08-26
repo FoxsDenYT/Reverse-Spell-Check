@@ -99,23 +99,8 @@
         </button><br><br>
         <textarea name="" id="checkedout" cols="50" placeholder="Output will appear here"></textarea><br><br><button><h5>Say it!</h5></button>
         <script>
-            function getRandomItem(arr) {
-                const randomIndex = Math.floor(Math.random() * arr.length);
-                const item = arr[randomIndex];
-                return item;
-            }
-            function arrtostr(arr) {
-                var out = ""
-                arr.forEach(element => {
-                    out = out + element
-                });
-                return out;
-            }
-            var lettersOfAlphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-            var punctuation = [" ", ".", ",", "`", "'", '"', "!", "?"]
-            var changeLetter = ["", "", "", "", "", "yes"]
             function compressthewords(words){
-                w = words.split(" ")
+                w = words.replace("  ", " ").split(" ")
                 finalword = ""
                 w.forEach(e => {
                     finalword = finalword + e[0]
